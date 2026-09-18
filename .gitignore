@@ -1,13 +1,10 @@
-# Byte-compiled / optimized / DLL files
+# =====================================================
+# Python
+# =====================================================
+
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Distribution / packaging
-build/
-dist/
-*.egg-info/
-.eggs/
 
 # Virtual environments
 .venv/
@@ -15,20 +12,71 @@ venv/
 env/
 ENV/
 
-# Tooling caches
+# Testing / tooling caches
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
 .coverage
 htmlcov/
 
-# Generated model checkpoints (training writes these; not committed by default)
+# =====================================================
+# Python packaging
+# =====================================================
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =====================================================
+# Model checkpoints
+# =====================================================
+
+# Large trained model files
 *.pt
 *.pth
 *.ckpt
-outputs/best_captioner.pt
 
+# =====================================================
+# Generated audio
+# =====================================================
+
+*.mp3
+*.wav
+*.ogg
+
+outputs_audio/
+
+# =====================================================
+# Frontend
+# =====================================================
+
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# =====================================================
+# Environment / secrets
+# =====================================================
+
+.env
+.env.*
+!.env.example
+
+# =====================================================
 # OS / editor
+# =====================================================
+
 .DS_Store
+Thumbs.db
+
 .idea/
 .vscode/
+
+# =====================================================
+# Temporary files
+# =====================================================
+
+*.log
+*.tmp
+*.temp
